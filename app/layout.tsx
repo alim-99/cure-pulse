@@ -1,34 +1,36 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from '@/components/Theme'
+import { Plus_Jakarta_Sans as FontSans } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 
-const FontSans = Plus_Jakarta_Sans({
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
   subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-sans'
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
   title: "CarePulse",
-  description: "A healthcare managment system",
+  description:
+    "A healthcare patient management System designed to streamline patient registration, appointment scheduling, and medical records management for healthcare providers.",
   icons: {
-  icon: './logo-icon.svg'
-  }
+    icon: "/logo-icon.svg",
+  },
 };
 
-export default function RootLayout({ children }: 
-  Readonly<{
-    children: React.ReactNode
-  }>
-) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-dark-300 font-sans antialiased",
-          FontSans.variable
+          fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
@@ -36,6 +38,5 @@ export default function RootLayout({ children }:
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
-

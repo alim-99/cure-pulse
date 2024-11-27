@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body.dark {
-  color: white;
-}
-
 /* ========================================== TAILWIND STYLES */
 @layer base {
   /* Remove scrollbar */
@@ -211,7 +207,7 @@ body.dark {
   }
 
   .shad-textArea {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
+    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 focus-visible:ring-0 focus-visible:ring-offset-0 resize-none !important;
   }
 
   .shad-combobox-item {
@@ -266,13 +262,13 @@ body.dark {
     @apply space-y-5 bg-dark-400 border-dark-500 outline-none !important;
   }
 
-  .shad-sheet-content button {
+.shad-sheet-content button {
     @apply top-2 focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
   }
 
   /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
   .input-phone {
-    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-dark-400 placeholder:text-dark-600 border-dark-500 !important;
+    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-dark-400 placeholder:text-dark-700 border-dark-500 !important;
   }
 
   /* =====  REACT DATE PICKER OVERRIDES */
@@ -351,4 +347,8 @@ body.dark {
 
 .PhoneInputInput::placeholder {
   color: #1a1d21;
+}
+
+.gradient {
+  background-image: linear-gradient(to top right, #4D62E5, #87DDEE, #B6F09C);
 }
