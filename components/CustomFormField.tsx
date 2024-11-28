@@ -82,7 +82,7 @@ const RenderField = ({field, props}: {field: any, props: CustomProps}) => {
       )
     case FormFieldType.DATE_PICKER:
       return (
-        <div className='flex rounded-md w-40 border border-dark-500 bg-dark-400'>
+        <div className='flex rounded-md  border border-dark-500 bg-dark-400'>
           <Image
           src="/calendar.svg" 
           alt='calendar'
@@ -102,7 +102,6 @@ const RenderField = ({field, props}: {field: any, props: CustomProps}) => {
           }
           timeInputLabel='Time:'
           wrapperClassName='date-picker'
-          placeholderText='Your birth'
           />
           </FormControl>
         </div>

@@ -25,6 +25,7 @@ import "react-phone-number-input/style.css";
 import CustomFormField, { FormFieldType } from "../CustomFormField";
 import { FileUploader } from "../FileUploader";
 import SubmitButton from "../SubmitButton";
+import MainFormContainer from "../MainFormContainer";
 
 const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
@@ -126,8 +127,8 @@ const RegisterForm = ({ user }: { user: User }) => {
           />
 
           {/* EMAIL & PHONE */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="email"
@@ -144,11 +145,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Phone Number"
               placeholder="(555) 123-4567"
             />
-          </div>
+          </MainFormContainer>
 
           {/* BirthDate & Gender */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.DATE_PICKER}
               control={form.control}
               name="birthDate"
@@ -179,11 +180,11 @@ const RegisterForm = ({ user }: { user: User }) => {
                 </FormControl>
               )}
             />
-          </div>
+          </MainFormContainer>
 
           {/* Address & Occupation */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="address"
@@ -198,11 +199,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Occupation"
               placeholder=" Software Engineer"
             />
-          </div>
+          </MainFormContainer>
 
           {/* Emergency Contact Name & Emergency Contact Number */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="emergencyContactName"
@@ -217,7 +218,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Emergency contact number"
               placeholder="(555) 123-4567"
             />
-          </div>
+          </MainFormContainer>
         </section>
 
         <section className="space-y-6">
@@ -250,8 +251,8 @@ const RegisterForm = ({ user }: { user: User }) => {
           </CustomFormField>
 
           {/* INSURANCE & POLICY NUMBER */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.INPUT}
               control={form.control}
               name="insuranceProvider"
@@ -266,11 +267,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Insurance policy number"
               placeholder="ABC123456789"
             />
-          </div>
+          </MainFormContainer>
 
           {/* ALLERGY & CURRENT MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
               name="allergies"
@@ -285,11 +286,11 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Current medications"
               placeholder="Ibuprofen 200mg, Levothyroxine 50mcg"
             />
-          </div>
+          </MainFormContainer>
 
           {/* FAMILY MEDICATION & PAST MEDICATIONS */}
-          <div className="flex flex-col gap-6 xl:flex-row">
-            <CustomFormField
+          <MainFormContainer>
+          <CustomFormField
               fieldType={FormFieldType.TEXTAREA}
               control={form.control}
               name="familyMedicalHistory"
@@ -304,7 +305,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               label="Past medical history"
               placeholder="Appendectomy in 2015, Asthma diagnosis in childhood"
             />
-          </div>
+          </MainFormContainer>
         </section>
 
         <section className="space-y-6">
